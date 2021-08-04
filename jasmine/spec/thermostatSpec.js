@@ -46,4 +46,8 @@ describe("Thermostat tests", () => {
     thermostat.powerSaveToggle();
     expect(thermostat.powerSave).toEqual(true);
   });
+  it("Can reset temp to 20", () => {
+    thermostat.reset();
+    expect(thermostat.temperature()).toEqual(20);
+  })
 });
