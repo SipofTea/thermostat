@@ -1,12 +1,17 @@
 
 describe("Thermostat tests", () => {
+  beforeEach( () => {
+    thermostat = new Thermostat();
+  });
   it("Starts at 20", () => {
-    let thermostat = new Thermostat();
     expect(thermostat.temperature()).toEqual(20);
   });
   it("Raises temperature with 'up'", () => {
-    let thermostat = new Thermostat();
     thermostat.up();
     expect(thermostat.temperature()).toEqual(21);
+  });
+  it("Lowers temperature with 'down'", () => {
+    thermostat.down();
+    expect(thermostat.temperature()).toEqual(19);
   });
 });
