@@ -31,8 +31,16 @@ class Thermostat {
       this.powerSave = true;
     }
   }
-
   reset(){
     this.temp = 20;
+  }
+  energyUse() {
+    if(this.temp < 18)  {
+      return("Low Usage");
+    } else if(this.temp < 26) {
+      return("Medium Usage");
+    } else {
+      return("High Usage");
+    }
   }
 }
