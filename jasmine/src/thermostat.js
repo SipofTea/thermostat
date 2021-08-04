@@ -2,7 +2,7 @@ class Thermostat {
   constructor() {
     this.temp = 20;
     this.minTemp = 10;
-    this.powerSave = false;
+    this.powerSave = true;
   }
 
   temperature() {
@@ -22,6 +22,13 @@ class Thermostat {
     this.temp -= 1;
     } else {
       this.temp;
+    }
+  }
+  powerSaveToggle() {
+    if(this.powerSave == true) {
+      this.powerSave = false;
+    } else if(this.powerSave == false) {
+      this.powerSave = true;
     }
   }
 }

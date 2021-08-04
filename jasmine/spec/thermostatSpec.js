@@ -20,20 +20,30 @@ describe("Thermostat tests", () => {
     expect(thermostat.temperature()).toEqual(10);
   });
   it("Given power saving mode off, has max temp of 32", () => {
+    thermostat.powerSave = false;
     thermostat.temp = 32;
     thermostat.up();
     expect(thermostat.temperature()).toEqual(32);
   });
   it("Given power saving mode on, has max temp of 25", () => {
-    thermostat.powerSave = true
+    thermostat.powerSave = true;
     thermostat.temp = 25;
     thermostat.up();
     expect(thermostat.temperature()).toEqual(25);
   });
   it("Given power saving mode on, can raise temp to 25", () => {
-    thermostat.powerSave = true
+    thermostat.powerSave = true;
     thermostat.temp = 24;
     thermostat.up();
     expect(thermostat.temperature()).toEqual(25);
+  });
+  it("Can turn power saving off", () => {
+    thermostat.powerSaveToggle();
+    expect(thermostat.powerSave).toEqual(false);
+  });
+  it("Can turn power saving on", () => {
+    thermostat.powerSave = false;
+    thermostat.powerSaveToggle();
+    expect(thermostat.powerSave).toEqual(true);
   });
 });
