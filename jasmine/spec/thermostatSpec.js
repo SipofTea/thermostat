@@ -14,4 +14,9 @@ describe("Thermostat tests", () => {
     thermostat.down();
     expect(thermostat.temperature()).toEqual(19);
   });
+  it("Has minimum temperature of 10", () => {
+    thermostat.temp = 10;
+    thermostat.down();
+    expect(thermostat.temperature()).toEqual(10);
+  });
 });
