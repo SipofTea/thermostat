@@ -5,7 +5,7 @@ class Thermostat {
     this.powerSave = true;
   }
 
-  temperature() {
+  setTemperature() {
     return this.temp;
   }
   up() {

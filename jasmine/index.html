@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>Thermostat</title>
+  <script src="src/secrets.js"></script>
   <script src="src/thermostat.js"></script>
+  <script src="src/interface.js"></script>
 </head>
 
 <body>
   <header>Thermostat</header>
   <main>
     <div class="Temperature">
-    <p>Temperature: </p>
+    <p>Outdoor Temperature: <span id="outdoor-temp"></span> °C</p>
+    <p>Set Temperature: <span id="thermostat-temp"></span> °C</p>
     <button type="button">Raise</button>
     <button type="button">Lower</button>
     <button type="button">Reset</button>
