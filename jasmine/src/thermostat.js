@@ -9,38 +9,38 @@ class Thermostat {
     return this.temp;
   }
   up() {
-    if(this.powerSave == false && this.temp < 32) {
+    if (this.powerSave == false && this.temp < 32) {
       this.temp += 1;
-    } else if(this.powerSave == true && this.temp < 25) {
+    } else if (this.powerSave == true && this.temp < 25) {
       this.temp += 1;
     } else {
       this.temp;
     }
   }
   down() {
-    if(this.temp > this.minTemp) {
-    this.temp -= 1;
+    if (this.temp > this.minTemp) {
+      this.temp -= 1;
     } else {
       this.temp;
     }
   }
   powerSaveToggle() {
-    if(this.powerSave == true) {
+    if (this.powerSave == true) {
       this.powerSave = false;
-    } else if(this.powerSave == false) {
+    } else if (this.powerSave == false) {
       this.powerSave = true;
     }
   }
-  reset(){
+  reset() {
     this.temp = 20;
   }
   energyUse() {
-    if(this.temp < 18)  {
-      return("Low Usage");
-    } else if(this.temp < 26) {
-      return("Medium Usage");
+    if (this.temp < 18) {
+      return "Low Usage";
+    } else if (this.temp < 26) {
+      return "Medium Usage";
     } else {
-      return("High Usage");
+      return "High Usage";
     }
   }
 }
