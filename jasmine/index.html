@@ -12,16 +12,20 @@
   <header>Thermostat</header>
   <main>
     <div class="Temperature">
-    <p>Outdoor Temperature: <span id="outdoor-temp"></span> °C</p>
-    <p>Set Temperature: <span id="thermostat-temp"></span> °C</p>
-    <button type="button">Raise</button>
-    <button type="button">Lower</button>
-    <button type="button">Reset</button>
+      <form id="city-form">
+        <input id="city-name" type="text" placeholder="Enter a city"></input>
+        <input type="submit"></input>
+      </form>
+      <p>Outdoor Temperature: <span id="outdoor-temp"></span> °C</p>
+      <p>Set Temperature: <span id="thermostat-temp"></span> °C</p>
+      <button type="button">Raise</button>
+      <button type="button">Lower</button>
+      <button type="button">Reset</button>
     </div>
     <div class="PowerSave">
-    <p>PowerSave: </p>
-    <button type="button">PowerSave Toggle</button>
-    </div>
+      <p>PowerSave: </p>
+      <button type="button">PowerSave Toggle</button>
+      </div>
     <div class="EnergyUsage">
       <p>Energy Usage: </p>
     </div>
