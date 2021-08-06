@@ -1,4 +1,19 @@
 window.addEventListener("DOMContentLoaded", () => {
+  const thermostat = new Thermostat();
+  document.getElementById("thermostat-temp").innerText = thermostat.setTemperature();
+  document.querySelector("#raise").addEventListener("click", () => {
+    thermostat.up();
+  });
+  document.querySelector("#lower").addEventListener("click", () => {
+    thermostat.down();
+  });
+  document.querySelector("#reset").addEventListener("click", () => {
+    thermostat.reset();
+  });
+
+  
+  
+ // City temp display 
   document.querySelector("#city-form").addEventListener("submit", (event) => {
     event.preventDefault();
     const cityName = document.querySelector("#city-name").value;
