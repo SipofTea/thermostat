@@ -3,14 +3,21 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("thermostat-temp").innerText = thermostat.setTemperature();
   document.querySelector("#raise").addEventListener("click", () => {
     thermostat.up();
+    document.getElementById("thermostat-temp").innerText = thermostat.setTemperature();
   });
   document.querySelector("#lower").addEventListener("click", () => {
     thermostat.down();
+    document.getElementById("thermostat-temp").innerText = thermostat.setTemperature();
   });
   document.querySelector("#reset").addEventListener("click", () => {
     thermostat.reset();
+    document.getElementById("thermostat-temp").innerText = thermostat.setTemperature();
   });
-
+  document.querySelector("#powersave").innerText = thermostat.powerSaveSetting();
+  document.querySelector("#powersave_button").addEventListener("click", () => {
+    thermostat.powerSaveToggle();
+    document.querySelector("#powersave").innerText = thermostat.powerSaveSetting();
+  });
   
   
  // City temp display 

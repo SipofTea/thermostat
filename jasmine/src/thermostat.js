@@ -31,6 +31,15 @@ class Thermostat {
       this.powerSave = true;
     }
   }
+
+  powerSaveSetting() {
+    if (this.powerSave == true) {
+      return "ON"
+    } else if (this.powerSave == false) {
+      return "OFF"
+    }
+  }
+
   reset() {
     this.temp = 20;
   }
