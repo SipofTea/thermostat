@@ -43,6 +43,7 @@ class Thermostat {
   reset() {
     this.temp = 20;
   }
+  
   energyUse() {
     if (this.temp < 18) {
       return "Low Usage";

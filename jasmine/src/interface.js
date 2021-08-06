@@ -4,21 +4,24 @@ window.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#raise").addEventListener("click", () => {
     thermostat.up();
     document.getElementById("thermostat-temp").innerText = thermostat.setTemperature();
+    document.querySelector("#energy-usage").innerText = thermostat.energyUse();
   });
   document.querySelector("#lower").addEventListener("click", () => {
     thermostat.down();
     document.getElementById("thermostat-temp").innerText = thermostat.setTemperature();
+    document.querySelector("#energy-usage").innerText = thermostat.energyUse();
   });
   document.querySelector("#reset").addEventListener("click", () => {
     thermostat.reset();
     document.getElementById("thermostat-temp").innerText = thermostat.setTemperature();
+    document.querySelector("#energy-usage").innerText = thermostat.energyUse();
   });
   document.querySelector("#powersave").innerText = thermostat.powerSaveSetting();
-  document.querySelector("#powersave_button").addEventListener("click", () => {
+  document.querySelector("#powersave-button").addEventListener("click", () => {
     thermostat.powerSaveToggle();
     document.querySelector("#powersave").innerText = thermostat.powerSaveSetting();
   });
-  
+  document.querySelector("#energy-usage").innerText = thermostat.energyUse();
   
  // City temp display 
   document.querySelector("#city-form").addEventListener("submit", (event) => {
